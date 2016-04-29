@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.b2c</groupId>
+  <artifactId>com.b2c</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>b2c-domain</module>
+    <module>b2c-tool</module>
+    <module>b2c-api</module>
+    <module>b2c-search</module>
+    <module>b2c-user</module>
+    <module>b2c-activity</module>
+    <module>b2c-order</module>
+    <module>b2c-goods</module>
+    <module>b2c-www</module>
+    <module>b2c-admin</module>
+    <module>b2c-wap</module>
+    <module>b2c-app</module>
+    <module>b2c-customerservice</module>
+    <module>b2c-store</module>
+    <module>b2c-payment</module>
+    <module>b2c-task</module>
+  </modules>
+  <packaging>pom</packaging>
+
+  <name>com.b2c</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
