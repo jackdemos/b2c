@@ -10,7 +10,7 @@
     <dubbo:provider timeout="6000" loadbalance="roundrobin"/>
 
 
-    <dubbo:registry protocol="zookeeper" address="zk01.lizi-dev.com:2181,zk02.lizi-dev.com:2181,zk03.lizi-dev.com:2181"/>
+    <dubbo:registry protocol="zookeeper" address="zk01.lizi-test.com:2182,zk02.lizi-test.com:2182,zk03.lizi-test.com:2182"/>
     <dubbo:protocol name="dubbo" port="-1" threads="2000" accesslog="E:/data/logs/www/dubbo-access.log"/>
     <!--用户-->
     <dubbo:reference id="userService" interface="com.b2c.user.IUserService" version="1.0.0"/>
