@@ -33,7 +33,7 @@
   </listener>
 
   <servlet>
-    <servlet-name>b2c-www</servlet-name>
+    <servlet-name>b2c-wap</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
@@ -42,6 +42,6 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>b2c-www</servlet-name>
+    <servlet-name>b2c-wap</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping></web-app>

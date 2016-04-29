@@ -22,6 +22,7 @@
     <module>b2c-store</module>
     <module>b2c-payment</module>
     <module>b2c-task</module>
+    <module>b2c-couponservice</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -31,13 +32,4 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 </project>
