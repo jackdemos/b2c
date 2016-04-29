@@ -32,13 +32,17 @@ public class UserProviderService implements IUserService {
     public Result<String> insertUser(User user) {
         ResultSupport<String> result = new ResultSupport<String>();
         String message = ResultCodeEnum.SYS_USER_EXISTS.getDescription();
+        String userId = ResultCodeEnum.SYS_USER_EXISTS.getDescription();
+        int code = ResultCodeEnum.SYS_USER_EXISTS.getCode();
         int count = userDao.getUserCountByUserName(user.getUserName());
         if (count <1) {
             user.setPassword(user.getPassword()+"b2cc2b");
             userDao.insertUser(user);
-            message = user.getUserId();
+            userId = user.getUserId();
+            message =ResultCodeEnum.SYS_USER_REGISTER_SUCCESS.getDescription();
+            code = ResultCodeEnum.SYS_USER_REGISTER_SUCCESS.getCode();
         }
-        result.processResult(true,result,ResultCodeEnum.SYS_SUCCESS.getCode(),ResultCodeEnum.SYS_SUCCESS.getDescription(),message);
+        result.processResult(true,result,code,message,userId);
         return result;
 
     }
