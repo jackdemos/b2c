@@ -6,7 +6,7 @@
         http://code.alibabatech.com/schema/dubbo   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="b2c-payment"/>
+    <dubbo:application name="b2c-orders"/>
 
     <dubbo:provider retries="0" timeout="6000" loadbalance="roundrobin"/>
 
@@ -16,7 +16,7 @@
                     address="zk01.lizi-dev.com:2181,zk02.lizi-dev.com:2181,zk03.lizi-dev.com:2181"/>
     <dubbo:protocol name="dubbo" port="-1" threads="2000" accesslog="E:/data/logs/user/dubbo-access.log"/>
 
-    <dubbo:service interface="com.b2c..IPaymentService" class="com.b2c.payment.service.PaymentProviderService" version="1.0.0"/>
+    <dubbo:service interface="com.b2c.order.IOrderService" class="com.b2c.order.service.OrderProviderService" version="1.0.0"/>
 
 
 

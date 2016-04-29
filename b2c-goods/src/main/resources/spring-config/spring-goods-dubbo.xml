@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+   <!-- <context:property-placeholder location="classpath*:conf/conf.properties"/>-->
+
+   <!-- <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                <list>
+                    <value>classpath*:conf/conf.properties</value>
+                </list>
+            </property>
+    </bean>-->
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="b2c-goods"/>
+
+    <dubbo:provider retries="0" timeout="6000" loadbalance="roundrobin"/>
+
+    <dubbo:monitor protocol="registry"/>
+
+    <dubbo:registry protocol="zookeeper"
+                    address="zk01.lizi-test.com:2182,zk02.lizi-test.com:2182,zk03.lizi-test.com:2182"/>
+
+    <dubbo:protocol name="dubbo" port="-1" threads="2000" accesslog="E:/data/logs/user/dubbo-access.log"/>
+
+
+    <dubbo:service interface="com.b2c.brand.IBrandService" class="com.b2c.goods.service.brand.BrandProviderService"
+                   version="1.0.0" timeout="1000000"/>
+
+ <dubbo:service interface="com.b2c.category.ICategoryService" class="com.b2c.goods.service.category.CategoryProviderService"
+                version="1.0.0" timeout="1000000"/>
+</beans>
