@@ -1,1 +1,2 @@
 Order related basic services
+订单号生成规则：时间戳+用户号+商户号
