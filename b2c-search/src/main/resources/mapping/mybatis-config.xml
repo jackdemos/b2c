@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/> <!-- 将带'_'的 SQL 列名自动映射为驼峰命名的 Java 变量 -->
+    </settings>
     <mappers>
         <mapper resource="mapping/userMapper.xml"/>
     </mappers>
