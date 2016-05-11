@@ -2,7 +2,9 @@ package com.b2c.store.controller;
 
 import com.b2c.base.result.Result;
 import com.b2c.category.ICategoryService;
+import com.b2c.code.ResultCodeEnum;
 import com.b2c.domain.base.BackCategory;
+import com.b2c.domain.base.FrontCategory;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,6 +44,18 @@ public class StoreController {
         Result<List<BackCategory>> result = categoryService.getBackCategory(name);
         modelAndView.addObject("data",result.getModel());
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/addFrontCategory", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    @ResponseBody
+    public String addFrontCategory(){
+        FrontCategory category  = new FrontCategory("大家电","hfjje",null,1);
+        Result<Integer> selectResult= categoryService.getCountByFrontCategoryName(category.getName());
+        if(ResultCodeEnum.SYS_FRONTCATEGORY_EXISTS.getCode().equals(selectResult.getResultCode())) {
+            return new Gson().toJson(selectResult);
+        }
+          Result<Boolean>  result = categoryService.addFrontCategory(category);
+        return  new Gson().toJson(result);
     }
 
 }

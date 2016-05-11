@@ -1,12 +1,13 @@
 package com.b2c.domain.base;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Oakley on 2016-05-09.
  * 前台类目
  */
-public class FrontCategory {
+public class FrontCategory implements Serializable {
     private String id;
     private String name;
     private String code;
@@ -87,5 +88,16 @@ public class FrontCategory {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public FrontCategory() {
+    }
+
+    public FrontCategory(String name, String code, String parentId, int level) {
+        this.name = name;
+        this.code = code;
+        this.parentId = parentId;
+        this.level = level;
+
     }
 }

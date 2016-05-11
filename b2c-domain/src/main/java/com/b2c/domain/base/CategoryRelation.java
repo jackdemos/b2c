@@ -1,15 +1,18 @@
 package com.b2c.domain.base;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Oakley on 2016-05-09.
  * 前后台类目对应关系表
  */
-public class CategoryRelation {
+public class CategoryRelation implements Serializable {
     private String id;
     private String frontCategoryId;
+    private String frontCategoryName;
     private String backCategoryId;
+    private String backCategoryName;
     private int status;
     private Date updateDate;
     private Date createDate;
@@ -60,5 +63,21 @@ public class CategoryRelation {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public String getFrontCategoryName() {
+        return frontCategoryName;
+    }
+
+    public void setFrontCategoryName(String frontCategoryName) {
+        this.frontCategoryName = frontCategoryName;
+    }
+
+    public String getBackCategoryName() {
+        return backCategoryName;
+    }
+
+    public void setBackCategoryName(String backCategoryName) {
+        this.backCategoryName = backCategoryName;
     }
 }

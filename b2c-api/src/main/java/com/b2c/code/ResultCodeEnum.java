@@ -35,7 +35,9 @@ public enum ResultCodeEnum {
      * 商品信息提示 20000开始
      */
 
-     SYS_BACKCATEGORY_EXISTS(20001,"类目已存在"),
+     SYS_BACKCATEGORY_EXISTS(20001,"后台类目已存在"),
+     SYS_FRONTCATEGORY_EXISTS(20001,"前台类目已存在"),
+     SYS_CATEGORYRELATION_EXISTS(20001,"类目关系已存在"),
 
     /**
      * 订单信息提示 30000 开始
