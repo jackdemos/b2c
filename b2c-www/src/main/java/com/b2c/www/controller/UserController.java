@@ -52,7 +52,6 @@ public class UserController {
         User user = new User();
         user.setUserName(userName);
         user.setPassword(password);
-        Result rest =  paymentService.payment("abcd","badfer",23434.9D);
         result = userService.checkUser(user);
         if(ResultCodeEnum.SYS_PARAMS_NOTNULL.getCode() == result.getResultCode()){
             return new Gson().toJson(result);
