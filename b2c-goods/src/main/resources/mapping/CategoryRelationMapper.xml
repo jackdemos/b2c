@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.b2c.goods.dao.CategoryRelationDao">
+    <insert id="addCategoryRelation" parameterType="com.b2c.domain.base.CategoryRelation">
+        <selectKey keyProperty="id" resultType="string" order="BEFORE">
+              select UUID()
+        </selectKey>
+    </insert>
+
+    <update id="deleteCategoryRelationById" parameterType="java.lang.String">
+
+        update  category_relation set status=0 where id=#{id}
+
+    </update>
+
+
+    <select id="getCategoryRelation" parameterType="java.lang.String" resultType="com.b2c.domain.base.CategoryRelation">
+
+        select * from category_relation where `name` like CONCAT('%',#{name},'%' )
+
+    </select>
+        
+
+
+</mapper>
