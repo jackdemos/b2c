@@ -9,12 +9,13 @@
 <html>
 <head>
     <title>用户注册</title>
+    <link  rel="stylesheet"  type="text/css" href="../js/register.css"/>
 </head>
 <body>
     <form action="/insertUser" method="post">
-        <table>
-            <tr><td>用户名</td><td><input type="text" name="userName"></td></tr>
-            <tr><td>用户密码</td><td><input type="password" name="password"></td></tr>
+        <table >
+            <tr ><td >用户名</td><td><input type="text" name="userName"></td></tr>
+            <tr ><td >用户密码</td><td><input type="password" name="password"></td></tr>
         </table>
         <button type="submit" value="注册">注册</button>
     </form>
