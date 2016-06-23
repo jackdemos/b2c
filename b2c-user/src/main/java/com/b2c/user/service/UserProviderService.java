@@ -66,6 +66,7 @@ public class UserProviderService implements IUserService {
         return result;
     }
 
+
     public Result<List<User>> getUsersByName(String name) {
         ResultSupport<List<User>> result = new ResultSupport<List<User>>();
         List<User> userList = userDao.getUserByName(name);
@@ -74,11 +75,7 @@ public class UserProviderService implements IUserService {
         return result;
     }
 
-    /**
-     * 验证用户主要参数参数
-     * @param user
-     * @return
-     */
+
     public Result<String> checkUser(User user){
         ResultSupport<String> result = new ResultSupport<String>();
         if(StringUtils.isEmpty(user.getUserName()) || StringUtils.isEmpty(user.getPassword())){

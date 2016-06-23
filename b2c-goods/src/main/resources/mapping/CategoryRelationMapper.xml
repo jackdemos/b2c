@@ -7,6 +7,8 @@
         <selectKey keyProperty="id" resultType="string" order="BEFORE">
               select UUID()
         </selectKey>
+        insert into table(id,front_category_id,front_category_name,back_category_id,back_category_name)
+        values(#{id},#{frontCategoryId},#{frontCategoryName},#{backCategoryId},#{backCategoryName})
     </insert>
 
     <update id="deleteCategoryRelationById" parameterType="java.lang.String">
@@ -15,13 +17,25 @@
 
     </update>
 
+    <select id="getCategoryRelation" parameterType="com.b2c.domain.base.CategoryRelation" resultType="com.b2c.domain.base.CategoryRelation">
 
-    <select id="getCategoryRelation" parameterType="java.lang.String" resultType="com.b2c.domain.base.CategoryRelation">
-
-        select * from category_relation where `name` like CONCAT('%',#{name},'%' )
+        select * from category_relation
+          where 1=1
+        <if test="frontCategoryName!=null || frontCategoryName!=''">
+             and `front_category_name` like CONCAT('%',#{frontCategoryName},'%' )
+         </if>
+        <if test="backCategoryName!=null || frontCategoryName!=''">
+        and `back_category_name` like CONCAT('%',#{backCategoryName},'%' )
+    </if>
 
     </select>
-        
+
+
+    <select id="getCountByCategoryRelation" parameterType="com.b2c.domain.base.CategoryRelation">
+
+        select count(1)as count  from where front_category_id=#{frontCategoryId} and back_category_id=#{backCategoryId}
+
+    </select>
 
 
 </mapper>

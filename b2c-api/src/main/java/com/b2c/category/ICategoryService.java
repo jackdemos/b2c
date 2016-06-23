@@ -2,6 +2,8 @@ package com.b2c.category;
 
 import com.b2c.base.result.Result;
 import com.b2c.domain.base.BackCategory;
+import com.b2c.domain.base.CategoryRelation;
+import com.b2c.domain.base.FrontCategory;
 
 import java.util.List;
 

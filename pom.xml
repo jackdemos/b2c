@@ -23,6 +23,7 @@
     <module>b2c-payment</module>
     <module>b2c-task</module>
     <module>b2c-couponservice</module>
+    <module>b2c-sms</module>
   </modules>
   <packaging>pom</packaging>
 

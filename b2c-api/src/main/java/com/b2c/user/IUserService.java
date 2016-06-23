@@ -10,12 +10,17 @@ import java.util.List;
  */
 public interface IUserService {
     /**
-     * 获取用户
+     * 获取用户(精确匹配)
      * @param id
      * @return
      */
     Result<User> getUserById(String id);
 
+    /**
+     * 根据用户名获取用户信息(模糊匹配方式)
+     * @param name
+     * @return
+     */
     Result<List<User>> getUsersByName(String name);
 
     /**
