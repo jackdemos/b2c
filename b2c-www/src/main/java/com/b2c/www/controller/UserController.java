@@ -88,5 +88,12 @@ public class UserController {
         }
         return ip;
     }
+
+    @RequestMapping(value = "/getAccount", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    @ResponseBody
+    public String getAccount(){
+       Result<Boolean> result =  paymentService.payment("6a6b963d-1288-11e6-9ce9-000c299da979","2FC349F434DO",29.000);
+        return new Gson().toJson(result);
+    }
 }
 

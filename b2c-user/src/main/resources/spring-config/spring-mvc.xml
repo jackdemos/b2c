@@ -2,15 +2,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
-		 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+		 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <mvc:annotation-driven/>
 
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-    <context:component-scan base-package="com.b2c.user.controller"/>
+    <context:component-scan base-package="com.b2c.*"/>
     <!--启动注解-->
     <context:annotation-config/>
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
@@ -49,4 +51,13 @@
         <!-- 内存中的最大值 -->
         <property name="maxInMemorySize" value="40960"/>
     </bean>
+    <bean id="log" class="com.b2c.aop.MethodBeforeAop"/>
+    <bean id="methodTime" class="com.b2c.aop.MethodTimeActive"/>
+    <aop:config>
+        <aop:pointcut id="userPoint" expression="execution(* com.b2c.user.service.*.*(..))"/>
+        <aop:advisor advice-ref="log" pointcut-ref="userPoint"/>
+        <aop:aspect ref="methodTime">
+            <aop:around method="timeDubboService" pointcut-ref="userPoint"/>
+        </aop:aspect>
+    </aop:config>
 </beans>

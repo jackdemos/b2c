@@ -233,6 +233,11 @@
             <artifactId>spring-data-redis</artifactId>
             <version>1.3.4.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.b2c</groupId>
+            <artifactId>b2c-tool</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>b2c-user</finalName>
