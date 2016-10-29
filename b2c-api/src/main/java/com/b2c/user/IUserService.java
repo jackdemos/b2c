@@ -52,4 +52,13 @@ public interface IUserService {
      */
     Result<String> checkUser(User user);
 
+    /**
+     * 用户登录
+     * @param userName
+     * @param password
+     * @return
+     */
+    Result<User>  login(String userName,String password);
+
+
 }

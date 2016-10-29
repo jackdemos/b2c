@@ -42,4 +42,11 @@ public interface UserDao {
     boolean updatePasswordByUserId(User user);
 
     boolean updateUserById(User user);
+
+    /**
+     * 用户登录
+     * @param userName
+     * @return
+     */
+    User login(String userName);
 }

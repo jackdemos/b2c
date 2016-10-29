@@ -5,6 +5,7 @@ package com.b2c.www.controller;
  */
 
 import com.b2c.base.result.Result;
+import com.b2c.base.result.ResultSupport;
 import com.b2c.code.ResultCodeEnum;
 import com.b2c.domain.user.User;
 import com.b2c.payment.IPaymentService;
@@ -13,6 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -45,12 +47,20 @@ public class UserController {
                 .toJson(userService.getUserById(userId));
     }
 
-    @RequestMapping(value = "/insertUser", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/createUser/{username}/{password}", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public String insertUser(String userName, String password) {
+    public String createUser(@PathVariable("username") String username,@PathVariable("password") String password) {
         Result<String> result;
+        if(username==null || username.trim().length()==0|| password==null||password.trim().length()==0){
+            result = new ResultSupport<String>();
+            result.setSuccess(true);
+            result.setResultCode(ResultCodeEnum.SYS_PARAMS_NOTNULL.getCode());
+            result.setMessage(ResultCodeEnum.SYS_PARAMS_NOTNULL.getDescription());
+            result.setModel(null);
+            return new Gson().toJson(result);
+        }
         User user = new User();
-        user.setUserName(userName);
+        user.setUserName(username);
         user.setPassword(password);
         result = userService.checkUser(user);
         if(ResultCodeEnum.SYS_PARAMS_NOTNULL.getCode() == result.getResultCode()){
@@ -68,7 +78,7 @@ public class UserController {
 
     }
 
-    @RequestMapping(value = "/user/register", method = RequestMethod.GET)
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView register() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("register");
@@ -95,5 +105,15 @@ public class UserController {
        Result<Boolean> result =  paymentService.payment("6a6b963d-1288-11e6-9ce9-000c299da979","2FC349F434DO",29.000);
         return new Gson().toJson(result);
     }
+
+    @RequestMapping(value = "/login/{username}/{password}", method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
+    @ResponseBody
+    public String login(@PathVariable("username") String username,@PathVariable("password") String password){
+        Result<User> result = userService.login(username,password);
+        Gson gson =  new GsonBuilder().setDateFormat(" yyyy-MM-dd HH:mm:ss.SSS").create();
+       return gson.toJson(result);
+    }
+
+
 }
 

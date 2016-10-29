@@ -46,4 +46,28 @@
   <servlet-name>b2c-www</servlet-name>
   <url-pattern>/</url-pattern>
 </servlet-mapping>
+  <error-page>
+    <error-code>302</error-code>
+    <location>/WEB-INF/jsp/error/302.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>400</error-code>
+    <location>/WEB-INF/jsp/error/400.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>401</error-code>
+    <location>/WEB-INF/jsp/error/401.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/jsp/error/404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>504</error-code>
+    <location>/WEB-INF/jsp/error/504.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/jsp/error/500.jsp</location>
+  </error-page>
 </web-app>

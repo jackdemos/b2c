@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class User implements Serializable {
     /**用户id*/
-    private String userId;
+    private String id;
     /**用户登录名*/
     private String userName;
     /**密码*/
@@ -47,12 +47,13 @@ public class User implements Serializable {
     /**创建时间*/
     private Date createdTime;
 
-    public String getUserId() {
-        return userId;
+
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUserName() {

@@ -28,6 +28,7 @@ public enum ResultCodeEnum {
     SYS_NICKNNAME_EXISTS(10006,"用户昵称已存在"),
     SYS_CHANGE_PASSWORD_SUCCESS(10007,"密码修改成功"),
     SYS_USER_REGISTER_SUCCESS(10008,"用户注册成功"),
+    SYS_USER_PWD_ERROR(10009,"用户名或密码错误"),
 
 
 

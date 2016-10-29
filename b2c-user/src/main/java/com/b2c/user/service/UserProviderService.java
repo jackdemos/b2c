@@ -7,6 +7,7 @@ import com.b2c.code.ResultCodeEnum;
 import com.b2c.domain.user.User;
 import com.b2c.user.IUserService;
 import com.b2c.user.dao.UserDao;
+import com.b2c.vo.user.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.List;
  */
 @Service("userService")
 public class UserProviderService implements IUserService {
+
     @Autowired
     UserDao userDao;
 
@@ -38,7 +40,7 @@ public class UserProviderService implements IUserService {
         if (count <1) {
             user.setPassword(user.getPassword()+"b2cc2b");
             userDao.insertUser(user);
-            userId = user.getUserId();
+            userId = user.getId();
             message =ResultCodeEnum.SYS_USER_REGISTER_SUCCESS.getDescription();
             code = ResultCodeEnum.SYS_USER_REGISTER_SUCCESS.getCode();
         }
@@ -50,7 +52,7 @@ public class UserProviderService implements IUserService {
     public Result<Boolean> updatePasswordByUserId(String userId, String password) {
         ResultSupport<Boolean> result = new ResultSupport<Boolean>();
         User user = new User();
-        user.setUserId(userId);
+        user.setId(userId);
         user.setPassword(password);
         Boolean flag = userDao.updatePasswordByUserId(user);
 
@@ -82,6 +84,23 @@ public class UserProviderService implements IUserService {
             result.processResult(true,result,ResultCodeEnum.SYS_PARAMS_NOTNULL.getCode(),ResultCodeEnum.SYS_PARAMS_NOTNULL.getDescription(),"参数不能为空");
         }
         return result;
+    }
+
+    public Result<User>  login(String userName,String password){
+        Result<User> result =  new ResultSupport<User>();
+        User user = userDao.login(userName);
+        if(user==null || !user.getPassword().equals(password)){
+            result.setResultCode(ResultCodeEnum.SYS_USER_PWD_ERROR.getCode());
+            result.setMessage(ResultCodeEnum.SYS_USER_PWD_ERROR.getDescription());
+            result.setSuccess(true);
+            return result;
+        }
+        user.setPassword(null);
+        result.setModel(user);
+        result.setResultCode(ResultCodeEnum.SYS_SUCCESS.getCode());
+        result.setMessage(ResultCodeEnum.SYS_SUCCESS.getDescription());
+        result.setSuccess(true);
+        return  result;
     }
 
 
