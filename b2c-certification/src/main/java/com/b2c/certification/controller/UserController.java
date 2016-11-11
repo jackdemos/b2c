@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by Oakley on 2016-11-10.
  */
-@Controller("/user")
+@Controller
+@RequestMapping("/user")
 public class UserController {
 
     @RequestMapping("/login")
     public String login(User user, HttpServletRequest request){
-
+        System.out.println("进入login方法");
         Subject subject = SecurityUtils.getSubject();
-
         UsernamePasswordToken token = new UsernamePasswordToken(user.getUserName(),user.getPassword());
         try{
             subject.login(token);
@@ -31,7 +31,7 @@ public class UserController {
             e.printStackTrace();
             request.setAttribute("user",user);
             request.setAttribute("errorMsg","用户名或密码错误");
-            return "index";
+            return "login";
         }
     }
 }
