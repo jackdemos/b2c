@@ -20,8 +20,16 @@ public class UserController {
     @RequestMapping("/login")
     public String login(User user, HttpServletRequest request){
         System.out.println("进入login方法");
+        String userName = user.getUserName();
+        String password = user.getPassword();
+        if(user==null){
+            return "/index.jsp";
+        }
+        if(user==null || password==null ||userName.trim().isEmpty() ||password.trim().isEmpty()){
+            return "/index.jsp";
+        }
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getUserName(),user.getPassword());
+        UsernamePasswordToken token = new UsernamePasswordToken(userName,password);
         try{
             subject.login(token);
             Session session = subject.getSession();
