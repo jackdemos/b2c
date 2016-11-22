@@ -7,13 +7,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>b2c-activity</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>b2c-activity Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../b2c-cas</module>
+    </modules>
     <properties>
         <mybatis-version>3.2.8</mybatis-version>
         <mybatis-spring-version>1.2.2</mybatis-spring-version>
-        <spring-version>4.2.5.RELEASE</spring-version>
+        <spring-version>4.3.3.RELEASE</spring-version>
         <junit-version>4.12</junit-version>
         <druid-version>1.0.18</druid-version>
         <dubbo-version>2.5.6</dubbo-version>
