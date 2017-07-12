@@ -67,6 +67,7 @@
         <servlet-api-version>3.0-alpha-1</servlet-api-version>
         <javax-servlet-api-version>3.1.0</javax-servlet-api-version>
         <c3p0-version>0.9.5.2</c3p0-version>
+        <shiro-version>1.3.2</shiro-version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -79,6 +80,11 @@
                 <groupId>com.b2c</groupId>
                 <artifactId>b2c-api</artifactId>
                 <version>${b2c-aip-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -295,6 +301,11 @@
                 <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
                 <version>${c3p0-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-all</artifactId>
+                <version>${shiro-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

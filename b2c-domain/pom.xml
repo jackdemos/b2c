@@ -16,13 +16,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.b2c</groupId>
-            <artifactId>b2c-domain</artifactId>
-            </dependency>
-    </dependencies>
     <build>
         <finalName>b2c-domain</finalName>
         <plugins>
