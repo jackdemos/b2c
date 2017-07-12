@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/b2c-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-app" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-cas" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-certification" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-couponservice" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-customerservice" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-goods" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-order" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-payment" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-search" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-sms" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-store" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-task" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-user" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-wap" />
+    <file type="web" url="file://$PROJECT_DIR$/b2c-www" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/b2c-cas/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Akka</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30946884" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30946884" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

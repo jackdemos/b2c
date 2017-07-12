@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-activity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-cas" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-certification" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-couponservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-customerservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-goods" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-payment" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-store" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-task" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-tool" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-wap" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-www" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

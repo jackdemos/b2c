@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="b2c-admin" />
+        <module name="b2c-api" />
+        <module name="b2c-app" />
+        <module name="b2c-certification" />
+        <module name="b2c-couponservice" />
+        <module name="b2c-customerservice" />
+        <module name="b2c-domain" />
+        <module name="b2c-goods" />
+        <module name="b2c-order" />
+        <module name="b2c-payment" />
+        <module name="b2c-search" />
+        <module name="b2c-sms" />
+        <module name="b2c-store" />
+        <module name="b2c-task" />
+        <module name="b2c-tool" />
+        <module name="b2c-user" />
+        <module name="b2c-wap" />
+        <module name="b2c-www" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="b2c-activity" target="1.7" />
+      <module name="b2c-admin" target="1.7" />
+      <module name="b2c-api" target="1.7" />
+      <module name="b2c-app" target="1.7" />
+      <module name="b2c-cas" target="1.7" />
+      <module name="b2c-certification" target="1.7" />
+      <module name="b2c-couponservice" target="1.7" />
+      <module name="b2c-customerservice" target="1.7" />
+      <module name="b2c-domain" target="1.7" />
+      <module name="b2c-goods" target="1.7" />
+      <module name="b2c-order" target="1.7" />
+      <module name="b2c-payment" target="1.7" />
+      <module name="b2c-search" target="1.7" />
+      <module name="b2c-sms" target="1.7" />
+      <module name="b2c-store" target="1.7" />
+      <module name="b2c-task" target="1.7" />
+      <module name="b2c-tool" target="1.7" />
+      <module name="b2c-user" target="1.7" />
+      <module name="b2c-wap" target="1.7" />
+      <module name="b2c-www" target="1.7" />
+      <module name="com.b2c" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

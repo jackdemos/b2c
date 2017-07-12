@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="b2c-app:war exploded">
+    <output-path>$PROJECT_DIR$/b2c-app/target/b2c-app</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="b2c-app" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="b2c-api-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="b2c-api" />
+          </element>
+          <element id="archive" name="b2c-domain-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="b2c-domain" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/b2c-app/target/b2c-app/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="b2c-app/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="b2c-couponservice:war exploded">
-    <output-path>$PROJECT_DIR$/b2c-couponservice/target/b2c-couponservice</output-path>
+  <artifact type="exploded-war" name="b2c-customerservice:war exploded">
+    <output-path>$PROJECT_DIR$/b2c-customerservice/target/b2c-customerservice</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="b2c-couponservice" />
+          <element id="module-output" name="b2c-customerservice" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
@@ -45,7 +45,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.5" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.2" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="archive" name="b2c-domain-1.0-SNAPSHOT.jar">
@@ -60,9 +60,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/b2c-couponservice/target/b2c-couponservice/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/b2c-customerservice/target/b2c-customerservice/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="b2c-couponservice/web/Web" />
+      <element id="javaee-facet-resources" facet="b2c-customerservice/web/Web" />
     </root>
   </artifact>
 </component>
