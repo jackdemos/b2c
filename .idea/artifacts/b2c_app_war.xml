@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="b2c-app:war">
-    <output-path>$PROJECT_DIR$/b2c-app/target</output-path>
-    <root id="archive" name="b2c-app.war">
-      <element id="artifact" artifact-name="b2c-app:war exploded" />
-    </root>
-  </artifact>
-</component>

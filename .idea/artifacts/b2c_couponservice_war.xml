@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="b2c-couponservice:war">
-    <output-path>$PROJECT_DIR$/b2c-couponservice/target</output-path>
-    <root id="archive" name="b2c-couponservice.war">
-      <element id="artifact" artifact-name="b2c-couponservice:war exploded" />
-    </root>
-  </artifact>
-</component>
